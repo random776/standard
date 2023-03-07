@@ -6,14 +6,14 @@ const message = document.getElementById("msg") as HTMLElement;
 type State = { todos: string[] };
 
 // アプリケーションの状態
-const state: State = { todos: [] };
+const state : string[] = [];
 const state2 : number[] = [];
 const state3 : number[] = [];
 // アプリケーションの状態を UI に反映させる関数
 function render() {
   // 一旦全ての内容を削除
   todoContainer.innerHTML = "";
-  for (const [index, todo] of state.todos.entries()) {
+  for (const todo of state) {
     const li = document.createElement("li");
     const span = document.createElement("span");
     span.textContent = todo;
@@ -30,7 +30,7 @@ function standard() {
 }
 // 状態を変化させる関数
 function addTodo(todo: string) {
-  state.todos.push(todo);
+  state.push(todo);
   state2.push(parseFloat(todo));
   state3.push(parseFloat(todo)**2);
   render();
