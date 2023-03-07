@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body{
+    font-family: "游ゴシック Light", sans-serif;
+    margin: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+div {
+    padding: 10px;
+    border: 2px solid rgb(180, 191, 240);
+    border-radius: 5px;
+}

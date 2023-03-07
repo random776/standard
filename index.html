@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>（実験）標準偏差の導出</title>
+    <script type="text/javascript" async 
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">      
+    </script>
+    <link rel="stylesheet" href="base.css">
+  </head>
+  <body>
+    <h3>実験標準偏差の計算ツール</h3>
+    <div>
+    <p>実験標準偏差とは？</p>
+    <p>東京大学の理系生全員が学ぶ「基礎物理学実験」において、なぜか必須になる値である。</p>
+    <p>高校数学で習ったように、通常標準偏差と言われると、</p>
+    \begin{align}
+    \sigma = \sqrt{\sum_{i=1}^{n} \frac{(x_i-x_0)^2}{n}}
+    \end{align}
+    <p>と表されるが、基礎物理学実験では、分母のnをn-1に置き換えた実験標準偏差をなぜか用いる（理由は統計学参照）。</p>
+    \begin{align}
+    \sigma = \sqrt{\sum_{i=1}^{n} \frac{(x_i-x_0)^2}{n-1}}
+    \end{align}
+    </div>
+    <p>実験値を一つずつ半角小数で入力してください。</p>
+    <ul id="todos"></ul>
+    <input id="message" />
+    <button id="add-todo" type="button">追加</button>
+    <p id="msg"></p>
+    <script type="module" src="/src/main.ts"></script>
+    <small>Copyright(c) 2023 @東京大学駒場キャンパス ランゲルハンス棟 All Rights Reserved.</small>
+  </body>
+</html>
+  
